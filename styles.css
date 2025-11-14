@@ -1,0 +1,220 @@
+/* GENERAL */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #eefaff;
+    scroll-behavior: smooth;
+}
+
+/* NAVBAR */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(255,255,255,0.7);
+    backdrop-filter: blur(10px);
+    padding: 10px 0;
+    z-index: 1000;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+}
+
+.nav-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+    margin: auto;
+}
+
+.nav-logo {
+    width: 65px;
+    transition: 0.3s;
+}
+
+nav ul {
+    display: flex;
+    gap: 25px;
+    list-style: none;
+}
+
+nav ul li a {
+    text-decoration: none;
+    padding: 8px 20px;
+    border-radius: 20px;
+    background: linear-gradient(90deg,#d1c4ff,#bbe3ff);
+    color: #333;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+    background: linear-gradient(90deg,#b49bff,#84c7ff);
+    transform: scale(1.1);
+}
+
+/* SECCIONES */
+.seccion {
+    padding: 130px 40px;
+    text-align: center;
+}
+
+/* FONDOS */
+.fondo {
+    background: url("img/fondo1.jpg") no-repeat center/cover;
+}
+
+.fondo2 {
+    background: url("img/fondo2.jpg") no-repeat center/cover;
+}
+
+/* LOGO PRINCIPAL */
+.logo-grande {
+    width: 260px;
+    animation: zoomIn 1s ease-in-out;
+    filter: drop-shadow(0px 0px 15px rgba(0,0,0,0.4));
+}
+
+@keyframes zoomIn {
+    from { transform: scale(0.4); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+.logo {
+    width: 180px;
+    margin-top: 20px;
+}
+
+/* GRID */
+.grid-servicios {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+    margin-top: 40px;
+}
+
+.card {
+    background: rgba(255,255,255,0.7);
+    padding: 10px;
+    border-radius: 12px;
+    backdrop-filter: blur(5px);
+    transition: 0.35s;
+}
+
+.card img {
+    width: 100%;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0px 10px 25px rgba(0,0,0,0.25);
+}
+
+.card:hover img {
+    transform: scale(1.06);
+}
+
+/* FORMULARIO */
+.formulario {
+    display: flex;
+    flex-direction: column;
+    width: 350px;
+    margin: 0 auto;
+    gap: 10px;
+}
+
+.formulario input,
+.formulario textarea {
+    padding: 12px;
+    border-radius: 12px;
+    border: none;
+    background: #333;
+    color: white;
+    outline: none;
+    transition: 0.3s;
+}
+
+.formulario input:focus,
+.formulario textarea:focus {
+    background: #444;
+    box-shadow: 0 0 10px #80d0ff;
+}
+
+.formulario button {
+    padding: 12px;
+    border: none;
+    border-radius: 15px;
+    background: #111;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.formulario button:hover {
+    background: #222;
+}
+
+/* ANIMACIONES DE ENTRADA */
+.reveal {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 1.1s ease;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0px);
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #222;
+    color: white;
+    margin-top: 40px;
+}
+
+/* WHATSAPP BUTTON */
+.whatsapp-btn {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    background: #25d366;
+    color: white;
+    font-size: 32px;
+    padding: 12px 16px;
+    border-radius: 50%;
+    text-decoration: none;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    transition: 0.3s;
+}
+
+.whatsapp-btn:hover {
+    transform: scale(1.1);
+}
+/* LISTA CON ICONOS */
+.lista-iconos {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+    display: inline-block;
+    text-align: left;
+}
+
+.lista-iconos li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 20px;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.lista-iconos li img {
+    width: 26px;
+    height: 26px;
+    object-fit: contain;
+}
